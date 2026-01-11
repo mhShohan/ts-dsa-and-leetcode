@@ -1,3 +1,38 @@
+/**
+ * Group Anagrams
+ * @Steps to sove the problem:
+ * 1. Create a map to hold sorted string as key and list of anagrams as value.
+ * 2. Iterate through each string in the input array.
+ * 3. Sort the string to find its anagram key.
+ * 4. If the sorted string is not in the map, initialize it with an empty array.
+ * 5. Push the original string into the corresponding array in the map.
+ * 6. Finally, return the values of the map as an array of arrays.
+ */
+
+function groupAnagrams(strs: string[]) {
+  const anagramsMap: Record<string, string[]> = {};
+
+  for (let str of strs) {
+    // sort the string to find anagrams
+    const sortedStr = str.split('').sort().join('');
+
+    if (!anagramsMap[sortedStr]) {
+      anagramsMap[sortedStr] = [];
+    }
+    anagramsMap[sortedStr].push(str);
+  }
+
+  return Object.values(anagramsMap);
+}
+
+console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
+console.log(groupAnagrams(['', '']));
+console.log(groupAnagrams(['']));
+
+/**
+ *  Wrong Approach to Group Anagrams
+ */
+
 function checkAnagram(str1: string, str2: string) {
   if (str1.length !== str2.length) return false;
 
@@ -18,7 +53,7 @@ function checkAnagram(str1: string, str2: string) {
   return true;
 }
 
-function groupAnagrams(strs: string[]) {
+function groupAnagramsWrongApproach(strs: string[]) {
   const sortedStrs = strs.map((str: string) => {
     return str.split('').sort().join('');
   });
@@ -41,6 +76,3 @@ function groupAnagrams(strs: string[]) {
 
   return Object.values(obj);
 }
-
-console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
-console.log(groupAnagrams(['']));
