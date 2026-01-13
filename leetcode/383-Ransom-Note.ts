@@ -1,12 +1,17 @@
 /**
-Given two strings ransomNote and magazine, 
-return true if ransomNote can be constructed by using the letters from magazine 
-and false otherwise.
+ * 383. Ransom Note
+ * https://leetcode.com/problems/ransom-note/
+ * @ Steps to solve:
+ * 1. Create a frequency map to count occurrences of each character in the ransom note.
+ * 2. Iterate through each character in the magazine:
+ *    - If the character exists in the frequency map, decrement its count.
+ *    - If the count reaches zero, remove the character from the map.
+ * 3. After processing the magazine, check if the frequency map is empty:
+ *    - If it is empty, return true (all characters were found).
+ *    - If not, return false (some characters are missing).
+ */
 
-Each letter in magazine can only be used once in ransomNote.
-*/
-
-export const canConstruct = (ransomNote: string, magazine: string) => {
+const canConstruct = (ransomNote: string, magazine: string) => {
   const ransomNote_fr: Record<string, number> = {};
 
   // count the frequency of ransomNote
