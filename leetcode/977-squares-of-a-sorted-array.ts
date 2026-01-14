@@ -27,12 +27,15 @@ function sortedSquares(nums: number[]): number[] {
     let value: number;
 
     if (nums[left] * nums[left] >= nums[right] * nums[right]) {
-      value = nums[left] * nums[left++];
+      value = nums[left] * nums[left];
+      left++;
     } else {
-      value = nums[right] * nums[right--];
+      value = nums[right] * nums[right];
+      right--;
     }
 
-    output[i--] = value;
+    output[i] = value;
+    i--;
   }
 
   return output;
