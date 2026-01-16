@@ -9,6 +9,9 @@
  *    c. If the sum is greater than the target, move the right pointer one step left.
  *    d. If the sum is less than the target, move the left pointer one step right.
  * 3. If no pair is found, return an empty array.
+ *
+ * @Time Complexity: O(n), where n is the number of elements in the input array, since we are iterating through the array at most once.
+ * @Space Complexity: O(1) since we are using only a constant amount of extra space.
  */
 
 function twoSum(numbers: number[], target: number): number[] {

@@ -9,6 +9,9 @@
  * 3. After processing the magazine, check if the frequency map is empty:
  *    - If it is empty, return true (all characters were found).
  *    - If not, return false (some characters are missing).
+ *
+ * @Time Complexity: O(m + n), where m is the length of the ransom note and n is the length of the magazine.
+ * @Space Complexity: O(k), where k is the number of unique characters in the ransom note.
  */
 
 const canConstruct = (ransomNote: string, magazine: string) => {

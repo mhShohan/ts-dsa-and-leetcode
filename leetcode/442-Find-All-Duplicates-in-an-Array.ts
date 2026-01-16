@@ -8,6 +8,9 @@
  *    - If it does not exist, add it to the map with a value indicating it has been seen once.
  *    - If it already exists and indicates it has been seen once, add it to the duplicates array.
  * 4. Return the duplicates array.
+ *
+ * @Time Complexity: O(n) - where n is the number of elements in the input array, since we are iterating through the array once.
+ * @Space Complexity: O(n) - in the worst case, where all elements are duplicates and we store them in the frequency map and duplicates array.
  */
 
 function findDuplicates(nums: number[]): number[] {

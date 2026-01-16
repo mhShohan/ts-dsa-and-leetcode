@@ -16,6 +16,9 @@
  * 3. Skip duplicate elements to ensure unique triplets in the result.
  *    - Continue this process until all elements have been processed.
  * 4. Return the list of unique triplets that sum to zero.
+ *
+ * @Time Complexity: O(n^2) - where n is the number of elements in the input array. This is due to the outer loop iterating through each element and the inner while loop potentially iterating through the remaining elements.
+ * @Space Complexity: O(k) - where k is the number of unique triplets found that sum to zero, which are stored in the result array.
  */
 
 const threeSum = (nums: number[]): number[][] => {

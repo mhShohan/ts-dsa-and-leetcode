@@ -13,6 +13,9 @@
  * 5. If the sum is greater than `c`, decrement `b` to reduce the sum.
  * 6. If the sum is less than `c`, increment `a` to increase the sum.
  * 7. If the loop ends without finding such a pair, return false.
+ *
+ * @Time Complexity: O(√c) because in the worst case, we may need to check all pairs (a, b) where a and b are less than or equal to √c.
+ * @Space Complexity: O(1) since we are using only a constant amount of extra space.
  */
 
 const judgeSquareSum = function (c: number): boolean {

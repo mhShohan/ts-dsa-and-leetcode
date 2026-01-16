@@ -8,6 +8,9 @@
  * 4. Move the pointer pointing to the shorter line inward (either left++ or right--) to potentially find a taller line that could increase the area.
  * 5. Repeat steps 2-4 until the two pointers meet.
  * 6. Return the maximum area found.
+ *
+ * @Time Complexity: O(n), where n is the number of elements in the input array, since we are iterating through the array at most once.
+ * @Space Complexity: O(1) since we are using only a constant amount of extra space.
  */
 
 function maxArea(height: number[]): number {

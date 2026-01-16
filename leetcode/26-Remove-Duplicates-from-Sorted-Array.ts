@@ -7,6 +7,9 @@
  * 3. If the element at the right pointer is different from the element at the left pointer, increment the left pointer and update the element at the left pointer to be the element at the right pointer.
  * 4. Continue this process until the right pointer reaches the end of the array.
  * 5. The length of the modified array without duplicates will be left + 1.
+ *
+ * @Time Complexity: O(n), where n is the length of the array, since we are iterating through the array once.
+ * @Space Complexity: O(1) since we are using only a constant amount of extra space.
  */
 
 function removeDuplicates(nums: number[]): number {

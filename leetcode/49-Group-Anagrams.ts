@@ -7,6 +7,9 @@
  * 4. If the sorted string is not in the map, initialize it with an empty array.
  * 5. Push the original string into the corresponding array in the map.
  * 6. Finally, return the values of the map as an array of arrays.
+ *
+ * @Time Complexity: O(n k log k), where n is the number of strings and k is the maximum length of a string (due to sorting each string).
+ * @Space Complexity: O(n k), where n is the number of strings and k is the maximum length of a string (for storing the anagrams in the map).
  */
 
 function groupAnagrams(strs: string[]) {

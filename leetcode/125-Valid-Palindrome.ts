@@ -8,6 +8,9 @@
  * 4. Compare the characters at both pointers (case-insensitive). If they are not equal, return false.
  * 5. Move both pointers towards each other and repeat steps 2-4 until they meet or cross each other.
  * 6. If all characters matched, return true.
+ *
+ * @Time Complexity: O(n), where n is the length of the string, since we may need to check each character once.
+ * @Space Complexity: O(1) since we are using only a constant amount of extra space.
  */
 
 function checkAlphaNumeric(char: string): boolean {
