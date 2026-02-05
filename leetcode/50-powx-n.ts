@@ -4,7 +4,7 @@
  *
  * Implement pow(x, n), which calculates x raised to the power n (i.e., x^n).
  *
- * @Explaination
+ * @Explanation
  * We can use the "exponentiation by squaring" method to efficiently compute x^n.
  * The idea is to divide the problem into smaller subproblems:
  * - If n is even, we can compute (x^(n/2))^2.
